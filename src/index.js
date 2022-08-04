@@ -25,9 +25,9 @@ app.get("/about", (req, res) => {
     .on("data", (chunk) => {
       const obj = JSON.parse(chunk);
       const arr = [obj]; //to convert into array of objects as before
-      console.log(
-        `City Name is ${arr[0].name} And Temperature is ${arr[0].main.temp}`
-      );
+      // console.log(
+      //   `City Name is ${arr[0].name} And Temperature is ${arr[0].main.temp}`
+      // );
 
       res.write(arr[0].name);
     })
