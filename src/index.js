@@ -16,7 +16,9 @@ app.set("views", templatePath);
 hbs.registerPartials(partialPath);
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    name: req.query.name,
+  });
 });
 app.get("/about", (req, res) => {
   requests(
